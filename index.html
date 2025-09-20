@@ -59,6 +59,7 @@
         main {
             display: grid;
             grid-template-columns: 1fr 380px;
+            grid-template-rows: auto auto; /* Две строки: для контента и для формы */
             gap: 30px;
             margin-top: 30px;
         }
@@ -68,6 +69,8 @@
             border-radius: var(--radius);
             padding: 24px;
             box-shadow: 0 6px 30px rgba(7, 15, 81, 0.1);
+            grid-column: 1 / 2; /* Занимает первую колонку */
+            grid-row: 1 / 2; /* Занимает первую строку */
         }
 
         .hero {
@@ -180,6 +183,8 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            grid-column: 2 / 3; /* Занимает вторую колонку */
+            grid-row: 1 / 3; /* Занимает обе строки */
         }
 
         .card {
@@ -231,11 +236,12 @@
         }
 
         .suggestion-form {
-            margin-top: 30px;
-            padding: 24px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 16px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 24px;
+            grid-column: 1 / 2; /* Занимает первую колонку */
+            grid-row: 2 / 3; /* Занимает вторую строку */
         }
 
         .suggestion-form h2 {
@@ -427,10 +433,22 @@
                 text-align: center;
                 gap: 8px;
             }
+            
+            .logo h1 {
+                font-size: 26px;
+            }
+
+            .logo p {
+                font-size: 13px;
+            }
 
             main {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                display: block; /* Убираем грид для мобильных */
+                margin-top: 20px;
+            }
+
+            .poster, aside, .suggestion-form {
+                margin-bottom: 20px;
             }
 
             .poster {
@@ -443,7 +461,7 @@
             }
 
             .hero-text h2 {
-                font-size: 32px;
+                font-size: 30px;
             }
 
             .hero-text p {
@@ -486,12 +504,6 @@
 
             .suggestion-form {
                 padding: 16px;
-                margin-top: 20px;
-            }
-            
-            .suggestion-form h2 {
-                font-size: 20px;
-                margin-bottom: 16px;
             }
         }
 
@@ -503,7 +515,7 @@
             }
 
             .hero-text h2 {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             .hero-text p {
@@ -529,6 +541,10 @@
 
             .info p {
                 font-size: 12px;
+            }
+
+            .suggestion-form {
+                padding: 16px;
             }
             
             .suggestion-form h2 {
@@ -562,13 +578,11 @@
                     <div class="hero-text">
                         <h2>Vote for Medet</h2>
                         <p>100% сенім, 100% күш!</p>
-
                         <div class="cta-row">
                             <button class="btn btn-primary" onclick="openModal()">Голосовать</button>
                         </div>
                     </div>
                 </div>
-
                 <div class="info-blocks">
                     <div class="info fade-in" style="animation-delay: 0.2s;">
                         <h4>Проекты в будущем</h4>
@@ -592,7 +606,6 @@
                         <p>E-mail: yerkebulan316@gmail.com</p>
                     </div>
                 </div>
-
                 <div class="suggestion-form fade-in" style="animation-delay: 0.8s;">
                     <h2>Ваши предложения</h2>
                     <input type="text" id="name" placeholder="Ваше имя (необязательно)">
@@ -600,7 +613,7 @@
                     <button onclick="submitIdea()">Отправить</button>
                 </div>
             </section>
-
+            
             <aside>
                 <div class="card">
                     <h4>Моменты</h4>

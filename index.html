@@ -59,7 +59,7 @@
         main {
             display: grid;
             grid-template-columns: 1fr 380px;
-            grid-template-rows: auto auto; /* Две строки: для контента и для формы */
+            grid-template-rows: auto auto; /* Две строки для основного контента и формы */
             gap: 30px;
             margin-top: 30px;
         }
@@ -443,7 +443,7 @@
             }
 
             main {
-                display: block; /* Убираем грид для мобильных */
+                display: block; /* Убираем грид для мобильных, чтобы блоки выстроились по порядку */
                 margin-top: 20px;
             }
 
@@ -606,12 +606,6 @@
                         <p>E-mail: yerkebulan316@gmail.com</p>
                     </div>
                 </div>
-                <div class="suggestion-form fade-in" style="animation-delay: 0.8s;">
-                    <h2>Ваши предложения</h2>
-                    <input type="text" id="name" placeholder="Ваше имя (необязательно)">
-                    <textarea id="idea" placeholder="Ваша идея для улучшения жизни в общежитии" required></textarea>
-                    <button onclick="submitIdea()">Отправить</button>
-                </div>
             </section>
             
             <aside>
@@ -690,6 +684,12 @@
                     </div>
                 </div>
             </aside>
+            <div class="suggestion-form">
+                <h2>Ваши предложения</h2>
+                <input type="text" id="name" placeholder="Ваше имя (необязательно)">
+                <textarea id="idea" placeholder="Ваша идея для улучшения жизни в общежитии" required></textarea>
+                <button onclick="submitIdea()">Отправить</button>
+            </div>
         </main>
         
         <footer>

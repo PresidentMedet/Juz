@@ -14,6 +14,7 @@
             --max-width: 1100px;
             --radius: 16px;
             font-family: 'Inter', sans-serif;
+            line-height: 1.6;
         }
 
         body {
@@ -21,7 +22,6 @@
             background: linear-gradient(135deg, var(--brand-blue) 0%, var(--soft-gray) 50%, var(--brand-orange) 100%);
             color: var(--brand-blue);
             overflow-x: hidden;
-            line-height: 1.6;
         }
 
         .container {
@@ -38,6 +38,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 18px;
+            padding: 10px 0;
         }
 
         .logo h1 {
@@ -243,7 +244,7 @@
             font-size: 24px;
         }
 
-        .suggestion-form input, 
+        .suggestion-form input,
         .suggestion-form textarea {
             width: 100%;
             padding: 12px;
@@ -251,7 +252,7 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
-            box-sizing: border-box; /* Это очень важно */
+            box-sizing: border-box;
         }
         
         .suggestion-form textarea {
@@ -414,6 +415,7 @@
             background-color: var(--brand-orange);
         }
 
+        /* --- Стили для планшетов и мобильных (до 980px) --- */
         @media (max-width: 980px) {
             .container {
                 margin: 12px;
@@ -423,11 +425,16 @@
             header {
                 flex-direction: column;
                 text-align: center;
-                gap: 10px;
+                gap: 8px;
             }
 
             main {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .poster {
+                padding: 16px;
             }
 
             .hero {
@@ -436,43 +443,102 @@
             }
 
             .hero-text h2 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
             .hero-text p {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             .candidate-photo {
                 width: 100%;
-                height: 280px;
+                height: 320px;
                 transform: none;
+                border-width: 3px;
             }
 
             .candidate-photo:hover {
                 transform: none;
             }
-
+            
             .cta-row {
-                display: flex;
                 justify-content: center;
+                margin-top: 16px;
             }
 
             .info-blocks {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 16px;
+                margin-top: 20px;
+            }
+
+            .info {
+                padding: 14px;
+            }
+
+            .info h4 {
+                font-size: 16px;
+            }
+            
+            .info p {
+                font-size: 13px;
+            }
+
+            .suggestion-form {
+                padding: 16px;
+                margin-top: 20px;
+            }
+            
+            .suggestion-form h2 {
+                font-size: 20px;
+                margin-bottom: 16px;
             }
         }
 
-        @media (max-width: 500px) {
+        /* --- Стили для маленьких телефонов (до 420px) --- */
+        @media (max-width: 420px) {
+            .container {
+                margin: 8px;
+                padding: 12px;
+            }
+
             .hero-text h2 {
                 font-size: 28px;
             }
+            
             .hero-text p {
-                font-size: 16px;
+                font-size: 14px;
             }
+
+            .candidate-photo {
+                height: 250px;
+            }
+
+            .cta-row {
+                margin-top: 12px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .info h4 {
+                font-size: 15px;
+            }
+
+            .info p {
+                font-size: 12px;
+            }
+            
             .suggestion-form h2 {
-                font-size: 20px;
+                font-size: 18px;
+            }
+
+            .suggestion-form input,
+            .suggestion-form textarea {
+                padding: 10px;
+                font-size: 14px;
             }
         }
     </style>

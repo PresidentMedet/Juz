@@ -468,7 +468,7 @@
                 text-align: center;
                 gap: 8px;
             }
-
+            
             main {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -574,13 +574,6 @@
                     </div>
                 </div>
 
-                <div class="suggestion-form fade-in" style="animation-delay: 0.8s;">
-                    <h2>Ваши предложения</h2>
-                    <input type="text" id="name" placeholder="Ваше имя (необязательно)">
-                    <textarea id="idea" placeholder="Ваша идея для улучшения жизни в общежитии" required></textarea>
-                    <button onclick="submitIdea()">Отправить</button>
-                </div>
-
                 <footer>
                     <small>© 2025 Medet Campaign.</small>
                 </footer>
@@ -671,6 +664,13 @@
                 </div>
             </aside>
         </main>
+        
+        <div class="suggestion-form fade-in" style="animation-delay: 0.8s;">
+            <h2>Ваши предложения</h2>
+            <input type="text" id="name" placeholder="Ваше имя (необязательно)">
+            <textarea id="idea" placeholder="Ваша идея для улучшения жизни в общежитии" required></textarea>
+            <button onclick="submitIdea()">Отправить</button>
+        </div>
     </div>
 
     <div class="modal-overlay" id="voteModal">
